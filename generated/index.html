@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinding Visualizer WebGL</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+		span {
+			font-family: 'monospace';
+			font-size: 20px;
+		}
+
+
+
+        canvas {
+            border: 1px solid black;
+	    border-radius: 5px;
+        }
+
+        #keybindings {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="my_canvas" width="800" height="800"></canvas>
+    <script type="module" src="./pfv_webgl.js"></script>
+    <script type="module">
+	    import main from "./pfv_webgl.js";
+	    main();
+    </script>
+    <div id="keybindings">
+        <strong>Keybindings:</strong><br>
+	<span>n:</span> <strong>N</strong>ext algorithm iteration<br>
+	<span>b:</span> <strong>B</strong>ack an iteration<br>
+	<span>r:</span> <strong>R</strong>eset algorithm progress<br>
+	<span>1:</span> Enable dragging of start node<br>
+	<span>2:</span> Enable drawing of wall nodes<br>
+	<span>3:</span> Enable drawing of goal nodes<br>
+	<span>4:</span> Enable erasing of nodes<br>
+	<span>g:</span> <strong>G</strong>raph reset<br>
+    </div>
+
+    <script>
+        // You can add JavaScript code here to handle canvas and keybindings functionality.
+    </script>
+</body>
+</html>
+
